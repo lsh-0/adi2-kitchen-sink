@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Layout only: no callbacks and no Ada behind this page. -->
+<adi>
+  <link rel="stylesheet" href="css/palette_dark.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
+
+  <box class="page">
+    <box class="card">
+      <label text="Flex: wrap and gap" class="card-title"/>
+      <label text="Resize the window: the chips wrap onto new lines and keep an even gap." class="card-hint"/>
+      <box class="chips">
+        <label text="Ada 2022" class="chip"/>
+        <label text="SDL3" class="chip"/>
+        <label text="CSS" class="chip"/>
+        <label text="XML" class="chip"/>
+        <label text="SVG" class="chip"/>
+        <label text="Lottie" class="chip"/>
+        <label text="HTML" class="chip"/>
+        <label text="gettext" class="chip"/>
+        <label text="Bundled assets" class="chip"/>
+        <label text="HiDPI" class="chip"/>
+        <label text="Transitions" class="chip"/>
+        <label text="Handles" class="chip"/>
+        <label text="WebAssembly" class="chip"/>
+      </box>
+    </box>
+
+    <box class="card">
+      <label text="Flex: justify-content" class="card-title"/>
+      <box class="justify j-start" label="flex-start">
+        <box class="block"/><box class="block"/><box class="block"/>
+      </box>
+      <box class="justify j-center" label="center">
+        <box class="block"/><box class="block"/><box class="block"/>
+      </box>
+      <box class="justify j-between" label="space-between">
+        <box class="block"/><box class="block"/><box class="block"/>
+      </box>
+      <box class="justify j-evenly" label="space-evenly">
+        <box class="block"/><box class="block"/><box class="block"/>
+      </box>
+      <box class="justify j-end" label="flex-end">
+        <box class="block"/><box class="block"/><box class="block"/>
+      </box>
+      <box class="justify j-grow" label="flex-grow 1, 2, 1">
+        <box class="block grow-1"/><box class="block grow-2"/><box class="block grow-1"/>
+      </box>
+    </box>
+
+    <box class="columns">
+      <box class="card col">
+        <label text="Grid" class="card-title"/>
+        <box class="grid">
+          <label text="1 / span 2" class="cell cell-wide"/>
+          <label text="3" class="cell"/>
+          <label text="rows 2-3" class="cell cell-tall"/>
+          <label text="5" class="cell"/>
+          <label text="6" class="cell"/>
+          <label text="7" class="cell"/>
+          <label text="8" class="cell"/>
+        </box>
+      </box>
+
+      <box class="card col">
+        <label text="Position and overflow" class="card-title"/>
+        <box class="positioned">
+          <label text="position: relative container" class="card-hint"/>
+          <label text="absolute" class="badge"/>
+        </box>
+        <box class="scroller">
+          <label text="overflow-y: auto clips this box and scrolls it." class="body-text"/>
+          <label text="Scroll with the wheel or drag the bar." class="body-text"/>
+          <label text="Line 3" class="body-text"/>
+          <label text="Line 4" class="body-text"/>
+          <label text="Line 5" class="body-text"/>
+          <label text="Line 6" class="body-text"/>
+          <label text="Line 7" class="body-text"/>
+          <label text="Line 8" class="body-text"/>
+          <label text="Line 9" class="body-text"/>
+          <label text="Line 10" class="body-text"/>
+          <label text="The end." class="body-text"/>
+        </box>
+      </box>
+    </box>
+  </box>
+</adi>

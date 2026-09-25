@@ -1,0 +1,29 @@
+/* Typography for assets/document.html. The program puts the palette's
+   colours ahead of this sheet, so only sizes and spacing live here. */
+
+h1 { font-size: 26px; font-weight: 700; margin: 8px 0px 10px 0px; }
+h2 { font-size: 18px; font-weight: 700; margin: 18px 0px 6px 0px; }
+p  { font-size: 14px; line-height: 1.5; margin: 6px 0px; }
+li { font-size: 14px; line-height: 1.5; }
+ul, ol { margin: 4px 0px 4px 22px; }
+
+.lead { font-size: 15px; }
+.foot { font-size: 12px; }
+
+code, kbd, pre { font-family: monospace; font-size: 13px; }
+kbd  { padding: 0px 4px; border: 1px solid; border-radius: 4px; }
+pre  { padding: 10px 12px; margin: 8px 0px; border-radius: 6px; }
+mark { padding: 0px 2px; }
+b    { font-weight: 700; }
+i    { font-style: italic; }
+u    { text-decoration: underline; }
+s    { text-decoration: line-through; }
+small { font-size: 12px; }
+
+blockquote {
+  margin: 12px 0px;
+  padding: 6px 14px;
+  border-left: 4px solid;
+}
+
+hr { margin: 16px 0px; border-top: 1px solid; }

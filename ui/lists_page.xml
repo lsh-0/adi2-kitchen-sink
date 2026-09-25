@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adi>
+  <link rel="stylesheet" href="css/palette_dark.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
+
+  <generic name="Element_List" package="Adi.Widget.List_Box" type-param="Adi.Widget.Box.Box_Widget"/>
+
+  <callback name="On_Filter" type="Adi.Widget.Text_Input.Change_Callback"/>
+  <callback name="On_Mode" type="Adi.Widget.Combo_Box.Selection_Changed_Callback"/>
+  <callback name="On_Row_Clicked" type="Element_List.Item_Clicked_Callback"/>
+  <callback name="On_Row_Activated" type="Element_List.Item_Activated_Callback"/>
+  <callback name="On_Selection" type="Element_List.Selection_Changed_Callback"/>
+
+  <box class="page">
+    <box class="card">
+      <label text="A list built from data" class="card-title"/>
+      <label text="Rows are created in Ada from a table of elements and rebuilt on every keystroke of the filter. Row colours come from a category widget property that the stylesheet selects on. Arrow keys move the current row; Enter or a double click activates it." class="card-hint"/>
+      <box class="control-row">
+        <text-input id="Filter" text="" label="Filter by name, symbol, number or category" min-visible-chars="32" class="field" on-changed="On_Filter"/>
+        <combo-box id="Mode" class="combo" on-selection-changed="On_Mode">
+          <item text="Single selection"/>
+          <item text="Multiple selection"/>
+          <item text="Range selection"/>
+          <item text="No selection"/>
+        </combo-box>
+      </box>
+      <box class="split">
+        <list-box id="Elements" generic="Element_List" class="list"
+                  on-item-clicked="On_Row_Clicked"
+                  on-item-activated="On_Row_Activated"
+                  on-selection-changed="On_Selection"/>
+        <box class="detail">
+          <label id="Detail_Symbol" text="" class="detail-symbol"/>
+          <label id="Detail_Name" text="Select an element" class="detail-name"/>
+          <label id="Detail_Facts" text="" class="detail-facts"/>
+        </box>
+      </box>
+      <label id="List_Status" text="" class="readout"/>
+    </box>
+
+    <box class="card">
+      <label text="Categories" class="card-title"/>
+      <box id="Legend" class="chips"/>
+    </box>
+  </box>
+</adi>

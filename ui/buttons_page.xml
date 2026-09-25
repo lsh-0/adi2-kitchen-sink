@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adi>
+  <link rel="stylesheet" href="css/palette_dark.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
+
+  <enum name="Sample_Size" values="Small, Medium, Large, Huge"/>
+  <generic name="Size_Options" package="Adi.Widget.Button.Options" type-param="Sample_Size"/>
+
+  <callback name="On_Click" type="Adi.Widget.Button.Click_Callback"/>
+  <callback name="On_Format" type="Adi.Widget.Button.Toggle_Callback"/>
+  <callback name="On_Radio" type="Adi.Widget.Button.Toggle_Callback"/>
+  <callback name="On_Airplane" type="Adi.Widget.Button.Toggle_Callback"/>
+  <callback name="On_Size" type="Size_Options.Option_Changed_Callback"/>
+
+  <box class="page">
+    <box class="card">
+      <label text="Push buttons" class="card-title"/>
+      <label text="Variants differ only in CSS classes. Hover, press and focus are CSS pseudo-classes, and the colour changes are CSS transitions." class="card-hint"/>
+      <box class="control-row">
+        <button id="Primary"   text="Primary"   class="btn btn-primary"   on-clicked="On_Click"/>
+        <button id="Secondary" text="Secondary" class="btn btn-secondary" on-clicked="On_Click"/>
+        <button id="Danger"    text="Danger"    class="btn btn-danger"    on-clicked="On_Click"/>
+        <button id="Ghost"     text="Ghost"     class="btn btn-ghost"     on-clicked="On_Click"/>
+        <button text="Disabled" class="btn btn-primary" disabled="true"/>
+      </box>
+      <box class="control-row">
+        <button id="Star"   text="Star"   icon="icons.svg?id=star"   class="btn btn-secondary btn-icon" on-clicked="On_Click"/>
+        <button id="Like"   text="Like"   icon="icons.svg?id=heart"  class="btn btn-secondary btn-icon" on-clicked="On_Click"/>
+        <button id="Search" text="Search" icon="icons.svg?id=search" class="btn btn-secondary btn-icon" on-clicked="On_Click"/>
+        <button id="Notify" text="Notify" icon="icons.svg?id=bell"   class="btn btn-secondary btn-icon" on-clicked="On_Click"/>
+      </box>
+      <label id="Click_Count" text="No clicks yet." class="readout"/>
+    </box>
+
+    <box class="card">
+      <label text="Toggle buttons and switches" class="card-title"/>
+      <box class="control-row">
+        <button id="Bold"      text="Bold"      toggleable="true" class="btn btn-toggle" on-toggled="On_Format"/>
+        <button id="Italic"    text="Italic"    toggleable="true" class="btn btn-toggle" on-toggled="On_Format"/>
+        <button id="Underline" text="Underline" toggleable="true" class="btn btn-toggle" on-toggled="On_Format"/>
+      </box>
+      <label id="Format_Sample" text="The quick brown fox jumps over the lazy dog." class="format-sample"/>
+      <box id="Radios" class="settings">
+        <box class="setting-row">
+          <label text="Wi-Fi" class="setting-label"/>
+          <switch id="Wifi" checked="true" class="switch" on-toggled="On_Radio"/>
+        </box>
+        <box class="setting-row">
+          <label text="Bluetooth" class="setting-label"/>
+          <switch id="Bluetooth" class="switch" on-toggled="On_Radio"/>
+        </box>
+      </box>
+      <box class="setting-row">
+        <label text="Airplane mode disables the box above, and every switch in it inherits :disabled" class="setting-label"/>
+        <switch id="Airplane" class="switch" on-toggled="On_Airplane"/>
+      </box>
+      <label id="Toggle_State" text="" class="readout"/>
+    </box>
+
+    <box class="card">
+      <label text="Option group" class="card-title"/>
+      <label text="Button.Options turns a set of buttons into radio buttons keyed by an enumeration. The choice below sets a widget property that the stylesheet selects on." class="card-hint"/>
+      <box class="segmented">
+        <button id="Size_Small"  text="Small"  class="segment"/>
+        <button id="Size_Medium" text="Medium" class="segment"/>
+        <button id="Size_Large"  text="Large"  class="segment"/>
+        <button id="Size_Huge"   text="Huge"   class="segment"/>
+      </box>
+      <box class="size-stage">
+        <label id="Size_Sample" text="Aa" class="size-sample"/>
+      </box>
+    </box>
+  </box>
+
+  <option-group id="Sizes" generic="Size_Options" on-changed="On_Size">
+    <option value="Small"  button="Size_Small"/>
+    <option value="Medium" button="Size_Medium"/>
+    <option value="Large"  button="Size_Large"/>
+    <option value="Huge"   button="Size_Huge"/>
+  </option-group>
+</adi>

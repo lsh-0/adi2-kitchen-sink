@@ -1,0 +1,37 @@
+/* Light palette: the same variables as palette_dark.css. */
+
+:root {
+  --bg: #eef0f4;
+  --surface: #ffffff;
+  --surface-2: #f4f5f8;
+  --surface-3: #e6e9ef;
+  --border: #d3d8e2;
+  --text: #1a1e27;
+  --text-muted: #566074;
+  --text-faint: #8a93a6;
+  --accent: #2f63e0;
+  --accent-hover: #4a78ea;
+  --accent-press: #2552c0;
+  --accent-text: #ffffff;
+  --accent-soft: rgba(47, 99, 224, 0.12);
+  --accent-glow: rgba(47, 99, 224, 0.35);
+  --danger: #d63b3b;
+  --danger-hover: #e45656;
+  --danger-soft: rgba(214, 59, 59, 0.12);
+  --warning: #b77a06;
+  --warning-soft: rgba(230, 160, 20, 0.18);
+  --success: #1f9a62;
+  --success-soft: rgba(31, 154, 98, 0.14);
+  --shadow: rgba(30, 40, 60, 0.18);
+  --backdrop: rgba(20, 25, 35, 0.35);
+  --board-bg: #f8f9fb;
+
+  --cat-alkali: #d9534a;
+  --cat-alkaline: #de8a36;
+  --cat-transition: #b8932c;
+  --cat-post: #6f9a3a;
+  --cat-metalloid: #2f9985;
+  --cat-nonmetal: #3a7fd0;
+  --cat-halogen: #7b5cd0;
+  --cat-noble: #bf4fa3;
+}

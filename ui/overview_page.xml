@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adi>
+  <link rel="stylesheet" href="css/palette_dark.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
+
+  <generic name="Float_Slider" package="Adi.Widget.Slider" type-param="Float"/>
+  <callback name="On_Speed" type="Float_Slider.Value_Changed_Callback"/>
+  <callback name="On_Toggle_Animations" type="Adi.Widget.Button.Click_Callback"/>
+
+  <box class="page">
+    <box class="hero">
+      <label text="One Ada program, every part of Adi2" class="hero-title"/>
+      <label text="Widgets, CSS with live reload and transitions, XML layouts compiled to Ada, SVG, Lottie, HTML, translations and a bundled asset store. Each page on the left shows one area; the Ada behind it is in src/demo-pages-*.adb." class="hero-body"/>
+    </box>
+
+    <box class="stats">
+      <box class="card stat">
+        <label text="Resident memory" class="stat-label"/>
+        <label id="Resident" text="-" class="stat-value"/>
+        <label id="Virtual" text="" class="stat-note"/>
+      </box>
+      <box class="card stat">
+        <label text="Frame" class="stat-label"/>
+        <label id="Frame_Time" text="-" class="stat-value"/>
+        <label id="Frame_Note" text="" class="stat-note"/>
+      </box>
+      <box class="card stat">
+        <label text="Live widgets" class="stat-label"/>
+        <label id="Widget_Count" text="-" class="stat-value"/>
+        <label text="in the window tree" class="stat-note"/>
+      </box>
+      <box class="card stat">
+        <label text="Uptime" class="stat-label"/>
+        <label id="Uptime" text="-" class="stat-value"/>
+        <label id="Renderer" text="" class="stat-note"/>
+      </box>
+    </box>
+
+    <box class="card">
+      <label text="Lottie animations, rendered by the bundled rlottie" class="card-title"/>
+      <box class="emoji-row">
+        <lottie-view id="Emoji_1" looping="true" class="emoji"/>
+        <lottie-view id="Emoji_2" looping="true" class="emoji"/>
+        <lottie-view id="Emoji_3" looping="true" class="emoji"/>
+        <lottie-view id="Emoji_4" looping="true" class="emoji"/>
+        <lottie-view id="Emoji_5" looping="true" class="emoji"/>
+        <lottie-view id="Emoji_6" looping="true" class="emoji"/>
+      </box>
+      <box class="control-row">
+        <label text="Playback speed" class="field-label"/>
+        <slider id="Speed" generic="Float_Slider" min="0.25" max="3.0" value="1.0" class="slider" on-changed="On_Speed"/>
+        <label id="Speed_Value" text="1.0x" class="readout"/>
+        <box class="grow"/>
+        <button id="Toggle_Animations" text="Pause" class="btn btn-secondary" on-clicked="On_Toggle_Animations"/>
+      </box>
+      <label id="Lottie_Note" text="" class="card-hint"/>
+    </box>
+
+    <box class="card">
+      <label text="Why it is built this way" class="card-title"/>
+      <label text="Widgets are named by generational handles, not pointers. A handle to a destroyed widget goes stale and every call through it does nothing, so a dangling reference cannot reach freed memory." class="body-text"/>
+      <label text="Memory is reclaimed deterministically: destroying a window destroys its tree at that moment, with no collector and no reference cycles." class="body-text"/>
+      <label text="Stylesheets are compiled into the binary and also read from css/ when it is present, so editing css/app.css restyles this window while it runs." class="body-text"/>
+    </box>
+  </box>
+</adi>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adi>
+  <link rel="stylesheet" href="css/palette_dark.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
+
+  <generic name="Float_Slider" package="Adi.Widget.Slider" type-param="Float"/>
+  <generic name="Float_Input" package="Adi.Widget.Value_Input" type-param="Float"/>
+  <generic name="Int_Slider" package="Adi.Widget.Integer_Slider" type-param="Integer"/>
+  <generic name="Int_Input" package="Adi.Widget.Integer_Value_Input" type-param="Integer"/>
+
+  <callback name="On_Name" type="Adi.Widget.Text_Input.Change_Callback"/>
+  <callback name="On_Show_Password" type="Adi.Widget.Button.Toggle_Callback"/>
+  <callback name="On_Copy" type="Adi.Widget.Button.Click_Callback"/>
+  <callback name="On_Paste" type="Adi.Widget.Button.Click_Callback"/>
+  <callback name="On_Level_Slider" type="Float_Slider.Value_Changed_Callback"/>
+  <callback name="On_Level_Input" type="Float_Input.Value_Changed_Callback"/>
+  <callback name="On_Count_Slider" type="Int_Slider.Value_Changed_Callback"/>
+  <callback name="On_Count_Input" type="Int_Input.Value_Changed_Callback"/>
+  <callback name="On_Fruit" type="Adi.Widget.Combo_Box.Selection_Changed_Callback"/>
+  <callback name="On_Editor" type="Adi.Widget.Text_Editor.Change_Callback"/>
+  <callback name="On_Read_Only" type="Adi.Widget.Button.Toggle_Callback"/>
+
+  <box class="page">
+    <box class="columns">
+      <box class="card col">
+        <label text="Text input" class="card-title"/>
+        <text-input id="Name" text="" label="Your name" min-visible-chars="24" class="field" on-changed="On_Name"/>
+        <text-input id="Password" text="correct horse battery staple" label="Password" password-mode="true" class="field"/>
+        <box class="setting-row">
+          <label text="Show password" class="setting-label"/>
+          <switch id="Show_Password" class="switch" on-toggled="On_Show_Password"/>
+        </box>
+        <label id="Greeting" text="Type a name. Right-click a field for its clipboard menu." class="readout"/>
+        <box class="control-row">
+          <button text="Copy name" class="btn btn-secondary" on-clicked="On_Copy"/>
+          <button text="Paste into name" class="btn btn-secondary" on-clicked="On_Paste"/>
+        </box>
+      </box>
+
+      <box class="card col">
+        <label text="Numbers" class="card-title"/>
+        <label text="Each slider is paired with a value input; either one drives the other. The bar is a widget this program defines." class="card-hint"/>
+        <box class="control-row">
+          <label text="Level" class="field-label"/>
+          <slider id="Level_Slider" generic="Float_Slider" min="0.0" max="1.0" value="0.6" class="slider" on-changed="On_Level_Slider"/>
+          <value-input id="Level_Input" generic="Float_Input" min="0.0" max="1.0" value="0.6" class="num-field" on-value-changed="On_Level_Input"/>
+        </box>
+        <meter id="Level_Meter" class="meter"/>
+        <box class="control-row">
+          <label text="Apples" class="field-label"/>
+          <integer-slider id="Count_Slider" generic="Int_Slider" min="0" max="12" value="3" class="slider" on-changed="On_Count_Slider"/>
+          <integer-value-input id="Count_Input" generic="Int_Input" min="0" max="12" value="3" class="num-field" on-value-changed="On_Count_Input"/>
+        </box>
+        <label id="Plural" text="" class="readout"/>
+      </box>
+    </box>
+
+    <box class="card">
+      <label text="Combo box" class="card-title"/>
+      <box class="control-row">
+        <combo-box id="Fruit" class="combo" on-selection-changed="On_Fruit">
+          <item text="Apple"/>
+          <item text="Banana"/>
+          <item text="Cherry"/>
+          <item text="Damson"/>
+          <item text="Elderberry"/>
+          <item text="Fig"/>
+          <item text="Grape"/>
+        </combo-box>
+        <combo-box id="Disabled_Combo" class="combo" disabled="true">
+          <item text="Disabled"/>
+        </combo-box>
+        <label id="Fruit_Choice" text="Nothing chosen." class="readout"/>
+      </box>
+    </box>
+
+    <box class="card">
+      <label text="Multi-line editor" class="card-title"/>
+      <text-editor id="Editor" text="" class="editor" on-changed="On_Editor"/>
+      <box class="control-row">
+        <switch id="Read_Only" class="switch" on-toggled="On_Read_Only"/>
+        <label text="Read-only" class="field-label"/>
+        <box class="grow"/>
+        <label id="Editor_Stats" text="" class="readout"/>
+      </box>
+    </box>
+  </box>
+</adi>

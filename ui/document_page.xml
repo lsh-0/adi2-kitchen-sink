@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adi>
+  <link rel="stylesheet" href="css/palette_dark.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
+
+  <generic name="Float_Slider" package="Adi.Widget.Slider" type-param="Float"/>
+  <callback name="On_Zoom" type="Float_Slider.Value_Changed_Callback"/>
+
+  <box class="page">
+    <box class="card doc-card">
+      <box class="control-row">
+        <label text="HTML view" class="card-title"/>
+        <box class="grow"/>
+        <label text="Zoom" class="field-label"/>
+        <slider id="Zoom" generic="Float_Slider" min="0.6" max="1.8" value="1.0" class="slider" on-changed="On_Zoom"/>
+      </box>
+      <html-view id="Doc" class="doc"/>
+      <label id="Link_Status" text="Links inside the page are reported here; web links open in the browser." class="readout"/>
+    </box>
+  </box>
+</adi>

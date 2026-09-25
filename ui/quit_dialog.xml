@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- A dialog declared in XML. The class attributes name the rules in
+     css/app.css for each part the dialog builds internally. -->
+<adi>
+  <link rel="stylesheet" href="css/palette_dark.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
+
+  <dialog title="Quit?" message="Close the kitchen sink? Your preferences are already saved."
+          buttons="yes-no" default-button="2" dismiss-on-escape="true" dismiss-on-backdrop="true"
+          class="dialog-backdrop" panel-class="dialog-panel" title-class="dialog-title"
+          message-class="dialog-message" button-row-class="dialog-buttons"
+          button-class="dialog-btn" primary-button-class="dialog-btn-primary"/>
+</adi>

@@ -1,0 +1,113 @@
+# French translations for adi2_demo.
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+msgid "Adi2 Kitchen Sink"
+msgstr "Adi2 tout-en-un"
+
+msgid "Overview"
+msgstr "Aperçu"
+
+msgid "Buttons"
+msgstr "Boutons"
+
+msgid "Inputs"
+msgstr "Saisie"
+
+msgid "Lists"
+msgstr "Listes"
+
+msgid "Layout"
+msgstr "Mise en page"
+
+msgid "Styling"
+msgstr "Styles"
+
+msgid "Media"
+msgstr "Médias"
+
+msgid "Document"
+msgstr "Document"
+
+msgid "Canvas"
+msgstr "Canevas"
+
+msgid "System"
+msgstr "Système"
+
+msgid "Dark theme"
+msgstr "Thème sombre"
+
+msgid "Ready."
+msgstr "Prêt."
+
+msgid "One Ada program, every part of Adi2"
+msgstr "Un programme Ada, toutes les parties d'Adi2"
+
+msgid "Resident memory"
+msgstr "Mémoire résidente"
+
+msgid "Live widgets"
+msgstr "Widgets vivants"
+
+msgid "Uptime"
+msgstr "Durée"
+
+msgid "Playback speed"
+msgstr "Vitesse de lecture"
+
+msgid "Pause"
+msgstr "Pause"
+
+msgid "Play"
+msgstr "Lecture"
+
+msgid "Push buttons"
+msgstr "Boutons poussoirs"
+
+msgid "Your name"
+msgstr "Votre nom"
+
+msgid "Password"
+msgstr "Mot de passe"
+
+msgid "Show password"
+msgstr "Afficher le mot de passe"
+
+msgid "Hello, %s."
+msgstr "Bonjour, %s."
+
+msgid "%d apple"
+msgid_plural "%d apples"
+msgstr[0] "%d pomme"
+msgstr[1] "%d pommes"
+
+msgid "Preferences"
+msgstr "Préférences"
+
+msgid "Language (applies at next start)"
+msgstr "Langue (au prochain démarrage)"
+
+msgid "Interface scale"
+msgstr "Échelle de l'interface"
+
+msgid "Text scale"
+msgstr "Échelle du texte"
+
+msgid "Quit?"
+msgstr "Quitter ?"
+
+msgid "Close the kitchen sink? Your preferences are already saved."
+msgstr "Fermer l'application ? Vos préférences sont déjà enregistrées."
+
+msgid "Momentum scrolling (off: each wheel notch moves one step, no coasting)"
+msgstr "Défilement avec inertie (désactivé : chaque cran de molette avance d'un pas, sans glisser)"
+
+msgid "Yes"
+msgstr "Oui"
+
+msgid "No"
+msgstr "Non"

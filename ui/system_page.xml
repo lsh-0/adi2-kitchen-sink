@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adi>
+  <link rel="stylesheet" href="css/palette_dark.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
+
+  <generic name="Float_Slider" package="Adi.Widget.Slider" type-param="Float"/>
+
+  <callback name="On_Alert" type="Adi.Widget.Button.Click_Callback"/>
+  <callback name="On_Confirm" type="Adi.Widget.Button.Click_Callback"/>
+  <callback name="On_Custom_Dialog" type="Adi.Widget.Button.Click_Callback"/>
+  <callback name="On_Quit_Dialog" type="Adi.Widget.Button.Click_Callback"/>
+  <callback name="On_Open_File" type="Adi.Widget.Button.Click_Callback"/>
+  <callback name="On_Save_File" type="Adi.Widget.Button.Click_Callback"/>
+  <callback name="On_Open_Folder" type="Adi.Widget.Button.Click_Callback"/>
+  <callback name="On_Open_URL" type="Adi.Widget.Button.Click_Callback"/>
+  <callback name="On_Language" type="Adi.Widget.Combo_Box.Selection_Changed_Callback"/>
+  <callback name="On_UI_Scale" type="Float_Slider.Value_Changed_Callback"/>
+  <callback name="On_Text_Scale" type="Float_Slider.Value_Changed_Callback"/>
+  <callback name="On_Fullscreen" type="Adi.Widget.Button.Toggle_Callback"/>
+  <callback name="On_Frame_Stats" type="Adi.Widget.Button.Toggle_Callback"/>
+  <callback name="On_Layout_Overlay" type="Adi.Widget.Button.Toggle_Callback"/>
+  <callback name="On_Confirm_Quit" type="Adi.Widget.Button.Toggle_Callback"/>
+  <callback name="On_Frame_Limit" type="Adi.Widget.Combo_Box.Selection_Changed_Callback"/>
+  <callback name="On_Idle_Drop" type="Adi.Widget.Button.Toggle_Callback"/>
+  <callback name="On_Momentum" type="Adi.Widget.Button.Toggle_Callback"/>
+
+  <box class="page">
+    <box class="columns">
+      <box class="card col">
+        <label text="Dialogs" class="card-title"/>
+        <label text="Modal overlays: focus is trapped inside, Escape dismisses, and the result arrives in a callback." class="card-hint"/>
+        <box class="control-row">
+          <button text="Alert" class="btn btn-secondary" on-clicked="On_Alert"/>
+          <button text="Yes / No / Cancel" class="btn btn-secondary" on-clicked="On_Confirm"/>
+          <button text="Custom content" class="btn btn-secondary" on-clicked="On_Custom_Dialog"/>
+          <button text="From XML" class="btn btn-secondary" on-clicked="On_Quit_Dialog"/>
+        </box>
+        <label id="Dialog_Result" text="" class="readout"/>
+      </box>
+
+      <box class="card col">
+        <label text="Context menu" class="card-title"/>
+        <box id="Menu_Target" class="menu-target">
+          <label text="Right-click anywhere in this box" class="card-hint"/>
+        </box>
+        <label id="Menu_Result" text="" class="readout"/>
+      </box>
+    </box>
+
+    <box class="columns">
+      <box class="card col">
+        <label text="Operating system" class="card-title"/>
+        <label text="Native file dialogs through SDL3, the browser, and folders the OS reports." class="card-hint"/>
+        <box class="control-row">
+          <button text="Open file" class="btn btn-secondary" on-clicked="On_Open_File"/>
+          <button text="Save as" class="btn btn-secondary" on-clicked="On_Save_File"/>
+          <button text="Choose folder" class="btn btn-secondary" on-clicked="On_Open_Folder"/>
+          <button text="adi2 on GitHub" class="btn btn-ghost" on-clicked="On_Open_URL"/>
+        </box>
+        <label id="File_Result" text="" class="readout"/>
+        <label id="Folders" text="" class="mono"/>
+      </box>
+
+      <box class="card col">
+        <label text="Preferences" class="card-title"/>
+        <box class="setting-row">
+          <label text="Language (applies at next start)" class="setting-label"/>
+          <combo-box id="Language" class="combo" on-selection-changed="On_Language">
+            <item text="English"/>
+            <item text="Français"/>
+            <item text="Deutsch"/>
+          </combo-box>
+        </box>
+        <label id="Language_Preview" text="" class="readout"/>
+        <box class="setting-row">
+          <label text="Interface scale" class="setting-label"/>
+          <slider id="UI_Scale" generic="Float_Slider" min="0.8" max="1.6" value="1.0" class="slider" on-changed="On_UI_Scale"/>
+        </box>
+        <box class="setting-row">
+          <label text="Text scale" class="setting-label"/>
+          <slider id="Text_Scale" generic="Float_Slider" min="0.8" max="1.6" value="1.0" class="slider" on-changed="On_Text_Scale"/>
+        </box>
+        <box class="setting-row">
+          <label text="Frame rate limit" class="setting-label"/>
+          <combo-box id="Frame_Limit" class="combo" on-selection-changed="On_Frame_Limit">
+            <item text="60 fps"/>
+            <item text="30 fps"/>
+            <item text="20 fps"/>
+          </combo-box>
+        </box>
+        <box class="setting-row">
+          <label text="Drop to 10 fps after a second without drawing" class="setting-label"/>
+          <switch id="Idle_Drop" checked="true" class="switch" on-toggled="On_Idle_Drop"/>
+        </box>
+        <box class="setting-row">
+          <label text="Momentum scrolling (off: each wheel notch moves one step, no coasting)" class="setting-label"/>
+          <switch id="Momentum" checked="true" class="switch" on-toggled="On_Momentum"/>
+        </box>
+        <box class="setting-row">
+          <label text="Full screen (F11)" class="setting-label"/>
+          <switch id="Fullscreen" class="switch" on-toggled="On_Fullscreen"/>
+        </box>
+        <box class="setting-row">
+          <label text="Frame statistics overlay" class="setting-label"/>
+          <switch id="Frame_Stats" class="switch" on-toggled="On_Frame_Stats"/>
+        </box>
+        <box class="setting-row">
+          <label text="Layout debug overlay" class="setting-label"/>
+          <switch id="Layout_Overlay" class="switch" on-toggled="On_Layout_Overlay"/>
+        </box>
+        <box class="setting-row">
+          <label text="Ask before quitting" class="setting-label"/>
+          <switch id="Confirm_Quit" checked="true" class="switch" on-toggled="On_Confirm_Quit"/>
+        </box>
+        <label id="Settings_Path" text="" class="mono"/>
+      </box>
+    </box>
+
+    <box class="card">
+      <label text="Keyboard" class="card-title"/>
+      <label text="Tab and Shift+Tab move focus. Ctrl+PgUp and Ctrl+PgDn change page, Ctrl+T switches theme and F11 toggles full screen: a window key hook sees every key before the focused widget does." class="card-hint"/>
+    </box>
+  </box>
+</adi>

@@ -1,0 +1,38 @@
+/* Dark palette. Installed ahead of app.css, which names colours only
+   through these variables. Edit a value and save while the demo runs. */
+
+:root {
+  --bg: #111318;
+  --surface: #191c23;
+  --surface-2: #21252e;
+  --surface-3: #2b303b;
+  --border: #343a47;
+  --text: #e7e9ef;
+  --text-muted: #9aa2b3;
+  --text-faint: #6c7486;
+  --accent: #7ea6ff;
+  --accent-hover: #9ab9ff;
+  --accent-press: #6690f0;
+  --accent-text: #0c1733;
+  --accent-soft: rgba(126, 166, 255, 0.16);
+  --accent-glow: rgba(126, 166, 255, 0.45);
+  --danger: #ff6f6f;
+  --danger-hover: #ff8c8c;
+  --danger-soft: rgba(255, 111, 111, 0.16);
+  --warning: #f2b84b;
+  --warning-soft: rgba(242, 184, 75, 0.18);
+  --success: #4fc690;
+  --success-soft: rgba(79, 198, 144, 0.16);
+  --shadow: rgba(0, 0, 0, 0.5);
+  --backdrop: rgba(5, 7, 12, 0.6);
+  --board-bg: #0c0e12;
+
+  --cat-alkali: #e0645a;
+  --cat-alkaline: #e59a4f;
+  --cat-transition: #c7a64a;
+  --cat-post: #8fb05a;
+  --cat-metalloid: #4fb3a0;
+  --cat-nonmetal: #5a9ae0;
+  --cat-halogen: #9a7de0;
+  --cat-noble: #d06fb8;
+}

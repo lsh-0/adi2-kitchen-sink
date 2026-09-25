@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The window: app bar, navigation, the page stack and a status bar.
+     Each page is a component generated from its own file. -->
+<adi>
+  <link rel="stylesheet" href="css/palette_dark.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
+
+  <enum name="Page"
+        values="Overview, Buttons, Inputs, Lists, Layout, Styling, Media, Document, Canvas, System"/>
+  <generic name="Page_Stack" package="Adi.Widget.Stack" type-param="Page"/>
+  <generic name="Nav_Options" package="Adi.Widget.Button.Options" type-param="Page"/>
+
+  <callback name="On_Page" type="Page_Stack.Page_Changed_Callback"/>
+  <callback name="On_Theme" type="Adi.Widget.Button.Toggle_Callback"/>
+
+  <window title="Adi2 Kitchen Sink" width="1180px" height="800px">
+    <box id="Root" class="root">
+      <box class="app-bar">
+        <label id="App_Title" text="Adi2 Kitchen Sink" icon="glyphs.svg?id=logo" class="app-title"/>
+        <label id="Page_Title" text="Overview" class="page-heading"/>
+        <box class="grow"/>
+        <label text="Dark theme" class="bar-label"/>
+        <switch id="Theme_Switch" checked="true" class="switch" on-toggled="On_Theme"/>
+      </box>
+
+      <box class="body">
+        <box class="nav">
+          <button id="Nav_Overview" text="Overview" icon="glyphs.svg?id=overview" class="nav-btn"/>
+          <button id="Nav_Buttons"  text="Buttons"  icon="glyphs.svg?id=buttons"  class="nav-btn"/>
+          <button id="Nav_Inputs"   text="Inputs"   icon="glyphs.svg?id=inputs"   class="nav-btn"/>
+          <button id="Nav_Lists"    text="Lists"    icon="glyphs.svg?id=lists"    class="nav-btn"/>
+          <button id="Nav_Layout"   text="Layout"   icon="glyphs.svg?id=layout"   class="nav-btn"/>
+          <button id="Nav_Styling"  text="Styling"  icon="glyphs.svg?id=styling"  class="nav-btn"/>
+          <button id="Nav_Media"    text="Media"    icon="glyphs.svg?id=media"    class="nav-btn"/>
+          <button id="Nav_Document" text="Document" icon="glyphs.svg?id=document" class="nav-btn"/>
+          <button id="Nav_Canvas"   text="Canvas"   icon="glyphs.svg?id=canvas"   class="nav-btn"/>
+          <button id="Nav_System"   text="System"   icon="glyphs.svg?id=system"   class="nav-btn"/>
+          <box class="grow"/>
+          <label text="Ctrl+PgUp / Ctrl+PgDn" class="nav-hint"/>
+        </box>
+
+        <stack id="Pages" generic="Page_Stack" class="pages">
+          <page key="Overview"><component package="Overview_Page_UI"/></page>
+          <page key="Buttons"><component package="Buttons_Page_UI"/></page>
+          <page key="Inputs"><component package="Inputs_Page_UI"/></page>
+          <page key="Lists"><component package="Lists_Page_UI"/></page>
+          <page key="Layout"><component package="Layout_Page_UI"/></page>
+          <page key="Styling"><component package="Styling_Page_UI"/></page>
+          <page key="Media"><component package="Media_Page_UI"/></page>
+          <page key="Document"><component package="Document_Page_UI"/></page>
+          <page key="Canvas"><component package="Canvas_Page_UI"/></page>
+          <page key="System"><component package="System_Page_UI"/></page>
+        </stack>
+      </box>
+
+      <box class="status-bar">
+        <label id="Status" text="Ready." class="status-text"/>
+        <box class="grow"/>
+        <label id="Stats" text="" class="status-stats"/>
+      </box>
+    </box>
+  </window>
+
+  <option-group id="Nav" generic="Nav_Options" on-changed="On_Page">
+    <option value="Overview" button="Nav_Overview"/>
+    <option value="Buttons"  button="Nav_Buttons"/>
+    <option value="Inputs"   button="Nav_Inputs"/>
+    <option value="Lists"    button="Nav_Lists"/>
+    <option value="Layout"   button="Nav_Layout"/>
+    <option value="Styling"  button="Nav_Styling"/>
+    <option value="Media"    button="Nav_Media"/>
+    <option value="Document" button="Nav_Document"/>
+    <option value="Canvas"   button="Nav_Canvas"/>
+    <option value="System"   button="Nav_System"/>
+  </option-group>
+</adi>

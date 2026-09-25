@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adi>
+  <link rel="stylesheet" href="css/palette_dark.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
+
+  <generic name="Speed_Slider" package="Adi.Widget.Integer_Slider" type-param="Integer"/>
+
+  <callback name="On_Play" type="Adi.Widget.Button.Click_Callback"/>
+  <callback name="On_Step" type="Adi.Widget.Button.Click_Callback"/>
+  <callback name="On_Randomise" type="Adi.Widget.Button.Click_Callback"/>
+  <callback name="On_Gliders" type="Adi.Widget.Button.Click_Callback"/>
+  <callback name="On_Clear" type="Adi.Widget.Button.Click_Callback"/>
+  <callback name="On_Speed" type="Speed_Slider.Value_Changed_Callback"/>
+
+  <box class="page">
+    <box class="card">
+      <label text="Game of Life on a texture view" class="card-title"/>
+      <label text="Each generation is a pure Ada function from one grid to the next. The grid is drawn into a pixel buffer and handed to the texture view with Set_Pixels, the same path an OpenGL or Vulkan renderer would take with its own texture." class="card-hint"/>
+      <box class="control-row">
+        <button id="Play" text="Pause" class="btn btn-primary" on-clicked="On_Play"/>
+        <button text="Step" class="btn btn-secondary" on-clicked="On_Step"/>
+        <button text="Randomise" class="btn btn-secondary" on-clicked="On_Randomise"/>
+        <button text="Add gliders" class="btn btn-secondary" on-clicked="On_Gliders"/>
+        <button text="Clear" class="btn btn-ghost" on-clicked="On_Clear"/>
+        <box class="grow"/>
+        <label text="Speed" class="field-label"/>
+        <integer-slider id="Speed" generic="Speed_Slider" min="1" max="60" value="15" class="slider" on-changed="On_Speed"/>
+        <label id="Speed_Value" text="15/s" class="readout"/>
+      </box>
+      <texture-view id="Board" class="board"/>
+      <box class="control-row">
+        <label id="Generation" text="" class="readout"/>
+        <box class="grow"/>
+        <label text="Population" class="field-label"/>
+        <meter id="Density" class="meter"/>
+      </box>
+    </box>
+  </box>
+</adi>

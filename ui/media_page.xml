@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adi>
+  <link rel="stylesheet" href="css/palette_dark.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
+
+  <callback name="On_Play" type="Adi.Widget.Button.Click_Callback"/>
+  <callback name="On_Stop" type="Adi.Widget.Button.Click_Callback"/>
+  <callback name="On_Reset" type="Adi.Widget.Button.Click_Callback"/>
+
+  <box class="page">
+    <box class="card">
+      <label text="SVG with object-fit" class="card-title"/>
+      <label text="One SVG document, rasterised by the bundled plutosvg, in frames of the same size." class="card-hint"/>
+      <box class="thumbs">
+        <box class="thumb-frame" label="fill"><image src="tiger.svg" class="thumb fit-fill"/></box>
+        <box class="thumb-frame" label="contain"><image src="tiger.svg" class="thumb fit-contain"/></box>
+        <box class="thumb-frame" label="cover"><image src="tiger.svg" class="thumb fit-cover"/></box>
+        <box class="thumb-frame" label="none"><image src="tiger.svg" class="thumb fit-none"/></box>
+        <box class="thumb-frame" label="scale-down"><image src="tiger.svg" class="thumb fit-scale-down"/></box>
+      </box>
+    </box>
+
+    <box class="columns">
+      <box class="card col">
+        <label text="Raster images and crops" class="card-title"/>
+        <box class="thumbs">
+          <box class="thumb-frame" label="PNG"><image src="happycat.png" class="thumb fit-contain"/></box>
+          <box class="thumb-frame" label="?x=;y=;w=;h= crop"><image src="happycat.png?x=40;y=20;w=80;h=80" class="thumb fit-contain pixelated"/></box>
+        </box>
+      </box>
+
+      <box class="card col">
+        <label text="Tinted sprites" class="card-title"/>
+        <label text="Symbols from one sprite sheet, coloured by CSS color." class="card-hint"/>
+        <box class="sprites">
+          <image src="icons.svg?id=home" class="sprite tint-1"/>
+          <image src="icons.svg?id=star" class="sprite tint-2"/>
+          <image src="icons.svg?id=heart" class="sprite tint-3"/>
+          <image src="icons.svg?id=settings" class="sprite tint-4"/>
+          <image src="icons.svg?id=search" class="sprite tint-5"/>
+          <image id="Path_Icon" class="sprite tint-6"/>
+        </box>
+      </box>
+    </box>
+
+    <box class="card">
+      <label text="Animated GIF" class="card-title"/>
+      <box class="control-row">
+        <gif-view id="Horse" looping="true" class="gif"/>
+        <box class="stack-col">
+          <box class="control-row">
+            <button text="Play" icon="glyphs.svg?id=play" class="btn btn-primary btn-icon" on-clicked="On_Play"/>
+            <button text="Stop" icon="glyphs.svg?id=pause" class="btn btn-secondary btn-icon" on-clicked="On_Stop"/>
+            <button text="Reset" class="btn btn-ghost" on-clicked="On_Reset"/>
+          </box>
+          <label id="Gif_State" text="" class="readout"/>
+        </box>
+      </box>
+    </box>
+  </box>
+</adi>

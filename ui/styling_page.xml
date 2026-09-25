@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adi>
+  <link rel="stylesheet" href="css/palette_dark.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
+
+  <generic name="Float_Slider" package="Adi.Widget.Slider" type-param="Float"/>
+
+  <callback name="On_Severity" type="Adi.Widget.Button.Click_Callback"/>
+  <callback name="On_Hue" type="Float_Slider.Value_Changed_Callback"/>
+  <callback name="On_Radius" type="Float_Slider.Value_Changed_Callback"/>
+  <callback name="On_Reload" type="Adi.Widget.Button.Click_Callback"/>
+  <callback name="On_Open_CSS" type="Adi.Widget.Button.Click_Callback"/>
+
+  <box class="page">
+    <box class="card">
+      <label text="Transitions" class="card-title"/>
+      <label text="Hover each tile. They share one rule and differ only in the easing named by their second class." class="card-hint"/>
+      <box class="control-row">
+        <button text="linear"      class="tile ease-linear"/>
+        <button text="ease"        class="tile ease-default"/>
+        <button text="ease-in"     class="tile ease-in"/>
+        <button text="ease-out"    class="tile ease-out"/>
+        <button text="ease-in-out" class="tile ease-in-out"/>
+      </box>
+    </box>
+
+    <box class="columns">
+      <box class="card col">
+        <label text="Gradients" class="card-title"/>
+        <box class="swatches">
+          <box class="swatch grad-sunset" label="to right"/>
+          <box class="swatch grad-sea" label="135deg"/>
+          <box class="swatch grad-stops" label="stops at 0, 20, 100%"/>
+          <box class="swatch grad-fade" label="alpha over colour"/>
+        </box>
+      </box>
+      <box class="card col">
+        <label text="Borders, shadows and outlines" class="card-title"/>
+        <box class="swatches">
+          <box class="swatch border-dashed" label="dashed"/>
+          <box class="swatch border-double" label="double"/>
+          <box class="swatch shadow-soft" label="box-shadow"/>
+          <box class="swatch outlined" label="outline"/>
+        </box>
+      </box>
+    </box>
+
+    <box class="card">
+      <label text="Widget properties" class="card-title"/>
+      <label text="The banner carries a severity property. The stylesheet selects on .alert[severity=&quot;warning&quot;] and so on, much as a web page selects on an attribute." class="card-hint"/>
+      <label id="Alert" text="All systems nominal." class="alert"/>
+      <box class="control-row">
+        <button id="Set_Ok"       text="OK"       class="btn btn-secondary" on-clicked="On_Severity"/>
+        <button id="Set_Warning"  text="Warning"  class="btn btn-secondary" on-clicked="On_Severity"/>
+        <button id="Set_Critical" text="Critical" class="btn btn-secondary" on-clicked="On_Severity"/>
+      </box>
+    </box>
+
+    <box class="columns">
+      <box class="card col">
+        <label text="A style composed in Ada" class="card-title"/>
+        <label text="The square below has no CSS. Its style is built in Ada from the two sliders." class="card-hint"/>
+        <box class="control-row">
+          <label text="Hue" class="field-label"/>
+          <slider id="Hue" generic="Float_Slider" min="0.0" max="360.0" value="220.0" class="slider" on-changed="On_Hue"/>
+        </box>
+        <box class="control-row">
+          <label text="Radius" class="field-label"/>
+          <slider id="Radius" generic="Float_Slider" min="0.0" max="48.0" value="16.0" class="slider" on-changed="On_Radius"/>
+        </box>
+        <box id="Swatch_Host" class="swatch-host"/>
+      </box>
+
+      <box class="card col">
+        <label text="Live stylesheets" class="card-title"/>
+        <label text="Run from the project directory and edit css/app.css or a palette in css/. Saving restyles the window; a sheet that fails to parse leaves the last good one in place." class="card-hint"/>
+        <label id="Sheet_Source" text="" class="readout"/>
+        <box class="control-row">
+          <button text="Reload now" class="btn btn-secondary" on-clicked="On_Reload"/>
+          <button text="Open css folder" class="btn btn-ghost" on-clicked="On_Open_CSS"/>
+        </box>
+      </box>
+    </box>
+  </box>
+</adi>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Tags for widgets this program defines, merged with adi2's grammar by
+     `xml_to_ada.py - -grammar`. -->
+<widgets>
+  <widget tag="meter">
+    <package>Demo.Meter</package>
+    <handle-type>Meter_Handle</handle-type>
+    <create-handle>{package}.Create_Handle</create-handle>
+  </widget>
+
+  <widget tag="lottie-view">
+    <package>Demo.Lottie_View</package>
+    <handle-type>Lottie_Handle</handle-type>
+    <create-handle>{package}.Create_Handle</create-handle>
+    <attribute name="looping" type="bool" setter="Set_Looping" setter-style="flag"/>
+  </widget>
+
+  <widget tag="gif-view">
+    <package>Demo.Gif_View</package>
+    <handle-type>Gif_Handle</handle-type>
+    <create-handle>{package}.Create_Handle</create-handle>
+    <attribute name="looping" type="bool" setter="Set_Looping" setter-style="flag"/>
+  </widget>
+</widgets>

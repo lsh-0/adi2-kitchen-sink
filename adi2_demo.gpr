@@ -1,0 +1,23 @@
+with "config/adi2_demo_config.gpr";
+project Adi2_Demo is
+
+   for Source_Dirs use ("src/", "src/generated/", "config/");
+   for Object_Dir use "obj/" & Adi2_Demo_Config.Build_Profile;
+   for Create_Missing_Dirs use "True";
+   for Exec_Dir use "bin";
+   for Main use ("adi2_demo.adb", "demo_tests.adb");
+
+   package Compiler is
+      for Default_Switches ("Ada") use
+        Adi2_Demo_Config.Ada_Compiler_Switches & ("-gnat2022");
+   end Compiler;
+
+   package Binder is
+      for Switches ("Ada") use ("-Es"); --  Symbolic traceback
+   end Binder;
+
+   package Install is
+      for Artifacts (".") use ("share");
+   end Install;
+
+end Adi2_Demo;

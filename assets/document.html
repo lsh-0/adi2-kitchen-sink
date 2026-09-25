@@ -1,0 +1,59 @@
+<html>
+<head>
+  <link rel="stylesheet" href="document.css">
+</head>
+<body>
+<h1>The HTML view</h1>
+<p class="lead">This page is an HTML file from the program's asset bundle, laid out
+and drawn by <code>Adi.Widget.Html_View</code>. It is a reader for
+documentation-style markup, not a browser: no scripts, no network, and every
+image and stylesheet comes through a callback the program supplies.</p>
+
+<h2>Inline text</h2>
+<p>Text runs can be <b>bold</b>, <i>italic</i>, <u>underlined</u>,
+<s>struck through</s>, <mark>marked</mark>, <small>small</small> or
+<code>code</code>. Keys read <kbd>Ctrl</kbd>+<kbd>T</kbd>. Lines wrap at
+whitespace and never inside a word.</p>
+
+<h2>Lists</h2>
+<ul>
+  <li>Unordered items take a marker from <code>list-style-type</code>.</li>
+  <li>Nested lists indent:
+    <ul>
+      <li>a second level</li>
+      <li>with its own marker</li>
+    </ul>
+  </li>
+</ul>
+<ol>
+  <li>Ordered lists count.</li>
+  <li>Each item is a block.</li>
+</ol>
+
+<h2>Images</h2>
+<p>An <code>img</code> resolves through the program's asset callback, which
+here reads the same bundle the widgets use:
+<img src="icons.svg?id=star" width="20" height="20" alt="star">
+<img src="icons.svg?id=heart" width="20" height="20" alt="heart">
+<img src="icons.svg?id=bell" width="20" height="20" alt="bell">
+and inline SVG is drawn in place:
+<svg width="22" height="22" viewBox="0 0 24 24"><path fill="#4fc690" d="M12 2 21 7v10l-9 5-9-5V7z"/></svg></p>
+
+<blockquote>A blockquote is a block with its own margins and a rule on the
+left, all from <code>document.css</code>.</blockquote>
+
+<h2>Preformatted</h2>
+<pre>procedure Step (G : Grid) return Grid;
+--  whitespace is kept inside pre</pre>
+
+<h2>Links</h2>
+<p>A link reaches the program as a callback with its <code>href</code>. This
+one is <a href="#top">internal</a> and only reports itself below the view.
+This one opens the browser:
+<a href="https://github.com/ovenpasta/adi2">github.com/ovenpasta/adi2</a>.</p>
+
+<hr>
+<p class="foot">Zoom with the slider above: the view scales its content
+without the window changing size.</p>
+</body>
+</html>

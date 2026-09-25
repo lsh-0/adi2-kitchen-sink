@@ -1,0 +1,34 @@
+name = "adi2_demo"
+description = "Kitchen-sink demonstration of the Adi2 GUI toolkit"
+version = "0.1.0-dev"
+
+authors = ["lsh"]
+maintainers = ["lsh <lsh-0@users.noreply.github.com>"]
+licenses = "Apache-2.0"
+website = ""
+tags = ["gui", "demo", "adi2"]
+
+executables = ["adi2_demo"]
+
+[[depends-on]]
+adi2 = "~0.9.0"
+
+#  adi2 is not in the community index; this is the commit the demo was
+#  written against.
+[[pins]]
+adi2 = { url='https://github.com/ovenpasta/adi2', commit='5caa4e817733c16ab3f589ae724142e0f7f65b38' }
+
+#  Ada sources generated from css/, ui/, i18n/ and assets/. The action
+#  runs with the Alire environment, which is what provides ADI2_TOOLS.
+[[actions]]
+type = "pre-build"
+command = ["bash", "tools/generate.sh"]
+
+[[actions]]
+type = "test"
+command = ["bin/demo_tests"]
+
+#  Generated sources do not follow a house style, and the library itself
+#  builds without style checks for the same reason.
+[build-switches]
+"*".style_checks = "No"

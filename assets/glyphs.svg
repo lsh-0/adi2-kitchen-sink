@@ -1,0 +1,49 @@
+<!-- Navigation glyphs for adi2_demo, drawn for this repository from
+     rectangles, arcs and polygons on a 24x24 grid. White fill: sprite
+     symbols are tintable, so CSS `color` on ::icon picks the colour. -->
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="logo" viewBox="0 0 24 24">
+    <path fill="white" d="M12 2 21 7v10l-9 5-9-5V7zM12 6.5 7 9.3v5.4l5 2.8 5-2.8V9.3z" fill-rule="evenodd"/>
+  </symbol>
+  <symbol id="overview" viewBox="0 0 24 24">
+    <path fill="white" d="M3 3h8v8H3zM13 3h8v8h-8zM3 13h8v8H3zM13 13h8v8h-8z"/>
+  </symbol>
+  <symbol id="buttons" viewBox="0 0 24 24">
+    <path fill="white" d="M7 6h10a6 6 0 0 1 0 12H7A6 6 0 0 1 7 6zM17 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6z" fill-rule="evenodd"/>
+  </symbol>
+  <symbol id="inputs" viewBox="0 0 24 24">
+    <path fill="white" d="M2 6h20v12H2zM4 8v8h16V8zM6 10h2v4H6z" fill-rule="evenodd"/>
+  </symbol>
+  <symbol id="lists" viewBox="0 0 24 24">
+    <path fill="white" d="M3 4h4v4H3zM9 5h12v2H9zM3 10h4v4H3zM9 11h12v2H9zM3 16h4v4H3zM9 17h12v2H9z"/>
+  </symbol>
+  <symbol id="layout" viewBox="0 0 24 24">
+    <path fill="white" d="M3 3h18v6H3zM3 11h7v10H3zM12 11h9v10h-9z"/>
+  </symbol>
+  <symbol id="styling" viewBox="0 0 24 24">
+    <path fill="white" d="M12 2 18.5 11A7 7 0 1 1 5.5 11z"/>
+  </symbol>
+  <symbol id="media" viewBox="0 0 24 24">
+    <path fill="white" d="M2 4h20v16H2zM4 6v12h16V6z" fill-rule="evenodd"/>
+    <path fill="white" d="M5 17 10 10l3.5 4.5 2.5-3 3 5.5z"/>
+    <path fill="white" d="M16.5 7.5a1.5 1.5 0 1 0 0 3a1.5 1.5 0 1 0 0-3z"/>
+  </symbol>
+  <symbol id="document" viewBox="0 0 24 24">
+    <path fill="white" d="M5 2h9l5 5v15H5zM8 11v1.5h8V11zM8 14.5V16h8v-1.5zM8 18v1.5h5V18z" fill-rule="evenodd"/>
+  </symbol>
+  <symbol id="canvas" viewBox="0 0 24 24">
+    <path fill="white" d="M4 4h4v4H4zM10 10h4v4h-4zM16 4h4v4h-4zM4 16h4v4H4zM16 16h4v4h-4zM10 4h4v4h-4zM16 10h4v4h-4z"/>
+  </symbol>
+  <symbol id="system" viewBox="0 0 24 24">
+    <path fill="white" d="M3 6h9v2H3zM16 6h5v2h-5zM12 4h3v6h-3zM3 16h4v2H3zM11 16h10v2H11zM7 14h3v6H7z"/>
+  </symbol>
+  <symbol id="play" viewBox="0 0 24 24">
+    <path fill="white" d="M7 4v16l13-8z"/>
+  </symbol>
+  <symbol id="pause" viewBox="0 0 24 24">
+    <path fill="white" d="M6 4h4v16H6zM14 4h4v16h-4z"/>
+  </symbol>
+  <symbol id="hexagon" viewBox="0 0 24 24">
+    <path fill="white" d="M7 3h10l5 9-5 9H7l-5-9z"/>
+  </symbol>
+</svg>

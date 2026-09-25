@@ -1,0 +1,64 @@
+/* Popups that combo boxes and context menus build for themselves. They
+   take their style when they are created rather than through a live
+   stylesheet, so this sheet is compiled once per palette and the program
+   hands the matching set to each popup when the theme changes. */
+
+.dropdown {
+  max-height: 320px;
+  overflow: auto;
+  padding: 4px;
+  border-radius: 10px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0px 12px 28px var(--shadow);
+}
+
+.option {
+  padding: 8px 12px;
+  margin: 1px 0px;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 120ms ease-out;
+}
+
+.option:hover {
+  background-color: var(--surface-3);
+}
+
+.option:selected {
+  background-color: var(--accent-soft);
+}
+
+.option::label {
+  color: var(--text);
+  font-size: 14px;
+}
+
+.menu {
+  width: 200px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0px 12px 28px var(--shadow);
+}
+
+.menu-item {
+  min-height: 28px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.menu-item:hover {
+  background-color: var(--accent-soft);
+}
+
+.menu-item::label {
+  color: var(--text);
+  font-size: 13px;
+}
+
+.menu-item:disabled::label {
+  color: var(--text-faint);
+}

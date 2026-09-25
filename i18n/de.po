@@ -1,0 +1,113 @@
+# German translations for adi2_demo.
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Adi2 Kitchen Sink"
+msgstr "Adi2 Werkschau"
+
+msgid "Overview"
+msgstr "Übersicht"
+
+msgid "Buttons"
+msgstr "Schaltflächen"
+
+msgid "Inputs"
+msgstr "Eingaben"
+
+msgid "Lists"
+msgstr "Listen"
+
+msgid "Layout"
+msgstr "Layout"
+
+msgid "Styling"
+msgstr "Gestaltung"
+
+msgid "Media"
+msgstr "Medien"
+
+msgid "Document"
+msgstr "Dokument"
+
+msgid "Canvas"
+msgstr "Leinwand"
+
+msgid "System"
+msgstr "System"
+
+msgid "Dark theme"
+msgstr "Dunkles Design"
+
+msgid "Ready."
+msgstr "Bereit."
+
+msgid "One Ada program, every part of Adi2"
+msgstr "Ein Ada-Programm, alle Teile von Adi2"
+
+msgid "Resident memory"
+msgstr "Residenter Speicher"
+
+msgid "Live widgets"
+msgstr "Aktive Widgets"
+
+msgid "Uptime"
+msgstr "Laufzeit"
+
+msgid "Playback speed"
+msgstr "Wiedergabetempo"
+
+msgid "Pause"
+msgstr "Pause"
+
+msgid "Play"
+msgstr "Abspielen"
+
+msgid "Push buttons"
+msgstr "Schaltknöpfe"
+
+msgid "Your name"
+msgstr "Ihr Name"
+
+msgid "Password"
+msgstr "Passwort"
+
+msgid "Show password"
+msgstr "Passwort anzeigen"
+
+msgid "Hello, %s."
+msgstr "Hallo, %s."
+
+msgid "%d apple"
+msgid_plural "%d apples"
+msgstr[0] "%d Apfel"
+msgstr[1] "%d Äpfel"
+
+msgid "Preferences"
+msgstr "Einstellungen"
+
+msgid "Language (applies at next start)"
+msgstr "Sprache (ab dem nächsten Start)"
+
+msgid "Interface scale"
+msgstr "Oberflächengröße"
+
+msgid "Text scale"
+msgstr "Textgröße"
+
+msgid "Quit?"
+msgstr "Beenden?"
+
+msgid "Close the kitchen sink? Your preferences are already saved."
+msgstr "Die Anwendung schließen? Ihre Einstellungen sind bereits gespeichert."
+
+msgid "Momentum scrolling (off: each wheel notch moves one step, no coasting)"
+msgstr "Scrollen mit Nachlauf (aus: jede Rastung des Mausrads scrollt einen Schritt, ohne Nachlauf)"
+
+msgid "Yes"
+msgstr "Ja"
+
+msgid "No"
+msgstr "Nein"
