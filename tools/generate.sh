@@ -25,7 +25,7 @@ sync_file() {
   cmp -s "$1" "$2" 2>/dev/null || cp "$1" "$2"
 }
 
-#  --- third-party assets (licences in NOTICE.md) -------------------------
+#  --- third-party assets (licences in README.md) -------------------------
 for f in icons.svg tiger.svg animhorse.gif happycat.png; do
   sync_file "$UPSTREAM/$f" "$STAGE/$f"
 done

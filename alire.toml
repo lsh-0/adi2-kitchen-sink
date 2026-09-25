@@ -1,6 +1,6 @@
 name = "adi2_demo"
 description = "Kitchen-sink demonstration of the Adi2 GUI toolkit"
-version = "0.1.0-dev"
+version = "0.1.0"
 
 authors = ["lsh"]
 maintainers = ["lsh <lsh-0@users.noreply.github.com>"]

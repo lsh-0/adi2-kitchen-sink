@@ -1,0 +1,11 @@
+#  build outputs and Alire state; the image makes its own
+.git
+alire
+bin
+obj
+config
+build
+dist
+src/generated
+share/adi2_demo/lottie
+share/adi2_demo/fonts
