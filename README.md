@@ -25,6 +25,77 @@ with live reload, themes, widget properties, SVG, Lottie, GIF, HTML, a CPU-drawn
 texture, dialogs, native file dialogs, settings persistence and gettext-style
 translation.
 
+## Screenshots
+
+Captured by `./manage.sh screenshots` with SDL's software renderer, in the
+default dark theme.
+
+### Overview
+
+Live process figures and six Lottie animations.
+
+![Overview page](docs/screenshots/overview.png)
+
+### Buttons
+
+Button variants, toggle buttons, switches and an option group.
+
+![Buttons page](docs/screenshots/buttons.png)
+
+### Inputs
+
+Text fields, paired sliders and value inputs, combo boxes, the text editor and a custom widget.
+
+![Inputs page](docs/screenshots/inputs.png)
+
+### Lists
+
+A list box built from data, coloured by a widget property.
+
+![Lists page](docs/screenshots/lists.png)
+
+### Layout
+
+Flex, grid, positioning and overflow, from CSS alone.
+
+![Layout page](docs/screenshots/layout.png)
+
+### Styling
+
+Transitions, gradients, borders, shadows and widget properties.
+
+![Styling page](docs/screenshots/styling.png)
+
+### Media
+
+SVG with `object-fit`, raster crops, tinted sprites and a GIF.
+
+![Media page](docs/screenshots/media.png)
+
+### Document
+
+The HTML view.
+
+![Document page](docs/screenshots/document.png)
+
+### Canvas
+
+Conway's Game of Life drawn through a texture view.
+
+![Canvas page](docs/screenshots/canvas.png)
+
+### System
+
+Dialogs, a context menu, file dialogs and preferences.
+
+![System page](docs/screenshots/system.png)
+
+### Light theme
+
+The same window after switching the palette.
+
+![Overview page in the light theme](docs/screenshots/overview-light.png)
+
 ## Build and run
 
 A release build runs in Docker, with the toolchain pinned in the `Dockerfile`:
